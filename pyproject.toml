@@ -4,6 +4,7 @@ requires = [
     "setuptools>=61.0",
     "wheel", 
     "colorama==0.4.6", 
+    "ec_tools==2.8"
 ]
 build-backend = "setuptools.build_meta"
 
