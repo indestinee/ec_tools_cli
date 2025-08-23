@@ -1,10 +1,7 @@
-
 [build-system]
 requires = [
     "setuptools>=61.0",
-    "wheel", 
-    "colorama==0.4.6", 
-    "ec_tools==2.8"
+    "wheel"
 ]
 build-backend = "setuptools.build_meta"
 
@@ -15,6 +12,10 @@ description = "A collection of tool cli for EC."
 readme = "README.md"
 requires-python = ">=3.7"
 license = { text = "MIT" }
+dependencies = [
+    "colorama==0.4.6", 
+    "ec_tools==2.8"
+]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
