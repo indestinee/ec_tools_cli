@@ -3,9 +3,9 @@ import logging
 
 from ec_tools.utils.io_utils import load_json
 
-from ec_rasp_tools.backup_machine.backup_machine import BackupMachine
-from ec_rasp_tools.backup_machine.data.config import Config
-from ec_rasp_tools.backup_machine.unload_machine import UnloadMachine
+from ec_tools_cli.backup_machine.backup_machine import BackupMachine
+from ec_tools_cli.backup_machine.data.config import Config
+from ec_tools_cli.backup_machine.unload_machine import UnloadMachine
 
 
 def get_args():

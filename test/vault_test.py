@@ -3,7 +3,7 @@ import shutil
 import subprocess
 import unittest
 
-from ec_rasp_tools.common.utils import logger_utils
+from ec_tools_cli.common.utils import logger_utils
 
 logger = logger_utils.setup_logger()
 

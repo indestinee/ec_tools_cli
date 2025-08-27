@@ -4,7 +4,7 @@ import re
 import sys
 from getpass import getpass
 
-from ec_rasp_tools.vault.parameter.parameter import Parameter
+from ec_tools_cli.vault.parameter.parameter import Parameter
 
 
 @dataclasses.dataclass
