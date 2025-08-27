@@ -3,7 +3,7 @@ from typing import Dict
 
 from ec_tools.database import SqliteClient, SqliteDao
 
-from ec_rasp_tools.backup_machine.data.record import Record
+from ec_tools_cli.backup_machine.data.record import Record
 
 
 def get_dao(path: str) -> SqliteDao[Record]:

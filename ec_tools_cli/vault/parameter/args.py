@@ -1,7 +1,7 @@
 import argparse
 import os
 
-from ec_rasp_tools.vault.parameter.parameter import Method, Parameter
+from ec_tools_cli.vault.parameter.parameter import Method, Parameter
 
 DETAILED_DOC = """
 Vault CLI tools for important file/password management with AES encryption.

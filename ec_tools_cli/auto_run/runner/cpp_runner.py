@@ -2,7 +2,7 @@ import logging
 
 from colorama import Fore, Style
 
-from ec_rasp_tools.auto_run.runner.auto_runner import AutoRunner
+from ec_tools_cli.auto_run.runner.auto_runner import AutoRunner
 
 
 class CRunner(AutoRunner):

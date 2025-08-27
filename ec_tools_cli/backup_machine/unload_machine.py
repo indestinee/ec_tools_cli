@@ -8,9 +8,9 @@ from cachetools import Cache, FIFOCache
 from ec_tools.tools.cipher import chunk_encryption_utils
 from ec_tools.utils.io_utils import chunk_read_file
 
-from ec_rasp_tools.backup_machine.data.config import Config
-from ec_rasp_tools.backup_machine.data.record import Record
-from ec_rasp_tools.backup_machine.utils import load_records, log_progress
+from ec_tools_cli.backup_machine.data.config import Config
+from ec_tools_cli.backup_machine.data.record import Record
+from ec_tools_cli.backup_machine.utils import load_records, log_progress
 
 
 @dataclasses.dataclass

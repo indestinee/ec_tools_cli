@@ -4,8 +4,8 @@ import sys
 
 from colorama import init as colorama_init
 
-from ec_rasp_tools.auto_run.runner.cpp_runner import CRunner
-from ec_rasp_tools.auto_run.runner.py_runner import PyRunner
+from ec_tools_cli.auto_run.runner.cpp_runner import CRunner
+from ec_tools_cli.auto_run.runner.py_runner import PyRunner
 
 
 def init():

@@ -1,11 +1,11 @@
 import logging
 import os
 
-from ec_rasp_tools.common.utils.logger_utils import setup_logger
-from ec_rasp_tools.vault.encryption import Encryption
-from ec_rasp_tools.vault.parameter.args import get_args
-from ec_rasp_tools.vault.parameter.parameter import Method, Parameter
-from ec_rasp_tools.vault.parameter.process import ParameterProcessor
+from ec_tools_cli.common.utils.logger_utils import setup_logger
+from ec_tools_cli.vault.encryption import Encryption
+from ec_tools_cli.vault.parameter.args import get_args
+from ec_tools_cli.vault.parameter.parameter import Method, Parameter
+from ec_tools_cli.vault.parameter.process import ParameterProcessor
 
 
 class Processor:

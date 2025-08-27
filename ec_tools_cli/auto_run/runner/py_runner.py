@@ -1,6 +1,6 @@
 from typing import List
 
-from ec_rasp_tools.auto_run.runner.auto_runner import SimpleRunner
+from ec_tools_cli.auto_run.runner.auto_runner import SimpleRunner
 
 
 class PyRunner(SimpleRunner):

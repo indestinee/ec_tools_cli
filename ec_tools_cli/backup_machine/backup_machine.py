@@ -11,10 +11,10 @@ from ec_tools.utils.hash_utils import calc_md5
 from ec_tools.utils.io_utils import chunk_read_file
 from ec_tools.utils.misc import get_batch
 
-from ec_rasp_tools.backup_machine.data.config import Config
-from ec_rasp_tools.backup_machine.data.record import Record
-from ec_rasp_tools.backup_machine.utils import get_dao, load_records, log_progress
-from ec_rasp_tools.backup_machine.zip_storage import ZipStorage
+from ec_tools_cli.backup_machine.data.config import Config
+from ec_tools_cli.backup_machine.data.record import Record
+from ec_tools_cli.backup_machine.utils import get_dao, load_records, log_progress
+from ec_tools_cli.backup_machine.zip_storage import ZipStorage
 
 
 @dataclasses.dataclass
@@ -40,7 +40,7 @@ class BackupMachine:
     def pack_up_once(self, version: str, zip_path: str, candidate_records: List[Record]) -> Optional[str]:
         version_path = os.path.join(zip_path, version)
         os.makedirs(version_path, exist_ok=True)
-        zip_storage = ZipStorage(output_path=version_path, config=self.config)
+        zip_storage = ZipStorage(zip_root_path=zip_path, output_path=version_path, config=self.config)
         logging.info("[BackupMachine] path: %s, process %s files", version_path, len(candidate_records))
         new_db_path = os.path.join(version_path, os.path.basename(self.config.db_path))
         shutil.copy(self.config.db_path, new_db_path)

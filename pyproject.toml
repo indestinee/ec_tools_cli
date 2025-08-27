@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ec_tools_cli"
-version = "0.0.2"
+version = "0.1.0"
 description = "A collection of tool cli for EC."
 readme = "README.md"
 requires-python = ">=3.7"
@@ -26,12 +26,11 @@ classifiers = [
 dev = ["black"]
 
 [project.scripts]
-ec-enc = "ec_rasp_tools.enc.cli:main"
-ec-sql = "ec_rasp_tools.db.cli:main"
-ec-vault = "ec_rasp_tools.vault.cli:main"
-ec-backup = "ec_rasp_tools.backup_machine.cli:main"
-auto-run = "ec_rasp_tools.auto_run.cli:main"
+ec-enc = "ec_tools_cli.enc.cli:main"
+ec-sql = "ec_tools_cli.db.cli:main"
+ec-vault = "ec_tools_cli.vault.cli:main"
+ec-backup = "ec_tools_cli.backup_machine.cli:main"
+auto-run = "ec_tools_cli.auto_run.cli:main"
 
 [tool.black]
 line-length = 120
-
