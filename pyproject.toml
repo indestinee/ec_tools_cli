@@ -34,4 +34,3 @@ auto-run = "ec_tools_cli.auto_run.cli:main"
 
 [tool.black]
 line-length = 120
-
