@@ -72,7 +72,7 @@ class BackupMachine:
             records.append(record)
         if records:
             dao = get_dao(new_db_path)
-            dao.insert(records)
+            dao.insert_or_replace(records)
             logging.info("[BackupMachine] %s records inserted into the database", len(records))
         shutil.copy(new_db_path, self.config.db_path)
 
