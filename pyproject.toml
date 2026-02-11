@@ -7,14 +7,18 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ec_tools_cli"
-version = "0.1.1"
+version = "0.1.2"
 description = "A collection of tool cli for EC."
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.12"
 license = { text = "MIT" }
 dependencies = [
-    "colorama==0.4.6", 
-    "ec_tools==2.8"
+    "cachetools==5.3.3",
+    "colorama==0.4.6",
+    "ec-tools==2.8",
+    "pillow==12.1.0",
+    "pyzbar==0.1.9",
+    "qrcode==8.2",
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -31,6 +35,12 @@ ec-sql = "ec_tools_cli.db.cli:main"
 ec-vault = "ec_tools_cli.vault.cli:main"
 ec-backup = "ec_tools_cli.backup_machine.cli:main"
 auto-run = "ec_tools_cli.auto_run.cli:main"
+ec-qrcode = "ec_tools_cli.one_off.qr_code:main"
 
 [tool.black]
 line-length = 120
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
+]
