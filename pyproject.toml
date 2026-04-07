@@ -1,33 +1,39 @@
 [build-system]
 requires = [
-    "setuptools>=61.0",
+    "setuptools>=77.0.0",
     "wheel"
 ]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "ec_tools_cli"
-version = "0.1.2"
+version = "0.1.5"
 description = "A collection of tool cli for EC."
-readme = "README.md"
-requires-python = ">=3.12"
-license = { text = "MIT" }
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.11"
+license = "MIT"
 dependencies = [
-    "cachetools==5.3.3",
-    "colorama==0.4.6",
-    "ec-tools==2.8",
-    "pillow==12.1.0",
-    "pyzbar==0.1.9",
-    "qrcode==8.2",
+    "cachetools>=5.3.3",
+    "colorama>=0.4.6",
+    "ec-tools>=3.3",
+    "pillow>=12.1.0",
+    "pyzbar>=0.1.9",
+    "qrcode>=8.2",
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent"
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Security :: Cryptography",
+    "Topic :: System :: Archiving :: Backup",
 ]
 
 [project.optional-dependencies]
-dev = ["black"]
+dev = [
+    "black",
+    "pre-commit>=4.5.1",
+    "pytest",
+]
 
 [project.scripts]
 ec-enc = "ec_tools_cli.enc.cli:main"
@@ -42,5 +48,19 @@ line-length = 120
 
 [dependency-groups]
 dev = [
+    "black",
     "pre-commit>=4.5.1",
+    "pytest",
+    "twine>=6.2.0",
 ]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = [
+    "test",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ec_tools_cli*"]
+exclude = ["test*"]

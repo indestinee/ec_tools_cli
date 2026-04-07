@@ -5,3 +5,4 @@ __pycache__
 test/backup/
 !test/backup/backup_config.json
 dist/
+.codex
