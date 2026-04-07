@@ -1,6 +1,6 @@
 cachetools==5.3.3
 colorama==0.4.6
-ec_tools>=3.2
+ec_tools>=3.3
 Pillow==12.1.0
 pyzbar==0.1.9
 qrcode==8.2
